@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Answer-{{ answer_id }}</title>
+    <style>
+        .origin_image,.content_image{display:block;}
+    </style>
+</head>
+<body>
+<h1>Answer-{{ answer_id }}</h1>
+<!--CONTENT-->
+<div>{% raw content %}</div>
+<br>
+<!--CONTENT-->
+<!--COMMENTS-->
+<h2>Comments of Answer-{{ answer_id }}</h2>
+{% for comment in comments %}
+<div>
+    <b>{% raw comment["Author"] %}</b>
+    <br>
+    {% raw comment["Content"] %}
+</div>
+<br>
+{% end %}
+<!--COMMENTS-->
+</body>
+</html>

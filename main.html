@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZhihuData</title>
+</head>
+<body>
+<h1>ZhihuData</h1>
+<!--QUESTIONS-->
+<ul>
+    {% for question in questions %}
+    <li><a href="/question/{{ question['QuestionID'] }}">{{ question["Title"] }}</a></li>
+    {% end %}
+</ul>
+<!--QUESTIONS-->
+</body>
+</html>
